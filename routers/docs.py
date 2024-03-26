@@ -1,12 +1,9 @@
-
-from fastapi import Depends, APIRouter
+from fastapi import Depends, APIRouter, HTTPException
 from sqlalchemy.orm import Session
-
 
 from utils.getUserByToken import get_current_user
 
-
-from database import  get_db
+from database import get_db
 
 from schemas.Response.Response import Response
 
@@ -14,25 +11,21 @@ from schemas.Request.DocsUpdate import DocsUpdate
 from schemas.Request.DocsCreate import DocsCreate
 from schemas.Response.Docs import Docs
 
-
-
 from models.Doc import Doc
 
 from models.SharedDoc import SharedDoc
 
-
 router = APIRouter(prefix="/me/docs", tags=["Docs"])
 
 
-
-@router.delete("/{doc_id}")
+@router.delete("/{doc_id}", response_model=Response)
 def deleteDocs(doc_id: int, db: Session = Depends(get_db), user=Depends(get_current_user)):
     if not user:
-        return {"message": "Unauthorized", "success": False}
+        raise HTTPException(status_code=401, detail="Unauthorized")
 
     doc = db.query(Doc).filter(Doc.owner_id == user["id"], Doc.id == doc_id).first()
     if not doc:
-        return {"message": "Doc not found", "success": False}
+        raise HTTPException(status_code=404, detail="Doc not found")
 
     db.delete(doc)
     db.commit()
@@ -43,18 +36,18 @@ def deleteDocs(doc_id: int, db: Session = Depends(get_db), user=Depends(get_curr
 def updateDocs(doc_id: int, new_doc: DocsUpdate, db: Session = Depends(get_db),
                user=Depends(get_current_user)):
     if not user:
-        return {"message": "Unauthorized", "success": False}
+        raise HTTPException(status_code=401, detail="Unauthorized")
 
     # check if user is the owner of the document
     doc = db.query(Doc).filter(Doc.owner_id == user["id"], Doc.id == doc_id).first()
     if not doc:
         # check if the document is shared with the user
         shared_doc = db.query(Doc).join(SharedDoc).filter(SharedDoc.user_id == user["id"],
-                                                                        SharedDoc.doc_id == doc_id,
-                                                                        SharedDoc.edit_access == True).first()
+                                                          SharedDoc.doc_id == doc_id,
+                                                          SharedDoc.edit_access == True).first()
 
         if not shared_doc:
-            return {"message": "Doc does not exist or User don't have access", "success": False}
+            raise HTTPException(status_code=404, detail="Doc not found or you don't have permission to edit it")
 
         doc = shared_doc
 
@@ -68,19 +61,19 @@ def updateDocs(doc_id: int, new_doc: DocsUpdate, db: Session = Depends(get_db),
     return {"message": "Doc updated successfully", "success": True}
 
 
-@router.get("/")
+@router.get("/", response_model=list[Docs])
 def getDocs(db: Session = Depends(get_db), user=Depends(get_current_user)):
     if not user:
-        return {"message": "Unauthorized", "success": False}
+        raise HTTPException(status_code=401, detail="Unauthorized")
 
     docs = db.query(Doc).filter(Doc.owner_id == user["id"]).all()
     return docs
 
 
-@router.get("/shared_with_me/")
+@router.get("/shared_with_me/", response_model=list[Docs])
 def getSharedDocs(db: Session = Depends(get_db), user=Depends(get_current_user)):
     if not user:
-        return {"message": "Unauthorized", "success": False}
+        raise HTTPException(status_code=401, detail="Unauthorized")
 
     shared_docs = db.query(Doc).join(SharedDoc).filter(SharedDoc.user_id == user["id"]).all()
     return shared_docs
@@ -89,11 +82,10 @@ def getSharedDocs(db: Session = Depends(get_db), user=Depends(get_current_user))
 @router.post("/", response_model=Docs)
 def create_doc(doc: DocsCreate, db: Session = Depends(get_db), user=Depends(get_current_user)):
     if not user:
-        return {"message": "Unauthorized", "success": False}
+        raise HTTPException(status_code=401, detail="Unauthorized")
 
     db_doc = Doc(title=doc.title, description=doc.description, owner_id=user["id"])
     db.add(db_doc)
     db.commit()
     db.refresh(db_doc)
-    print(db_doc)
     return db_doc

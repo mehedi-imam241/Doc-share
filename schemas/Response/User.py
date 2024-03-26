@@ -5,7 +5,16 @@ from schemas.common.UserBase import UserBase
 
 class User(UserBase,Response):
     id:  int
-    docs: list[Docs] = []
 
-    class Config:
-        from_attributes = True
+    model_config = {
+        "json_schema_extra": {
+            "examples": [
+                {
+                    "id": 1,
+                    "email": "mehedi@gmail.com",
+                    "success": True,
+                    "message": "Request Successful"
+                }
+            ]
+        }
+    }

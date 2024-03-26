@@ -8,5 +8,16 @@ class UserLoginResponse(Response):
     token: Optional[str] = None
     user: Optional[User] = None
 
-    class Config:
-        from_attributes = True
+    model_config = {
+        "json_schema_extra": {
+            "examples": [
+                {
+                    "token": "Some JWT Token",
+                    "user": {
+                        "id": 1,
+                        "email": "mehedi@gmail.com"
+                    }
+                }
+            ]
+        }
+    }

@@ -6,5 +6,15 @@ class Docs(DocsBase, Response):
     owner_id: int
     id: int
 
-    class Config:
-        from_attributes = True
+    model_config = {
+        "json_schema_extra": {
+            "examples": [
+                {
+                    "title": "My Doc Title",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                    "owner_id": 1,
+                    "id": 1
+                }
+            ]
+        }
+    }

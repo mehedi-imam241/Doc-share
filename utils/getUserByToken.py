@@ -5,7 +5,7 @@ from fastapi.security import OAuth2PasswordBearer
 
 from utils.JWT_util import verifyJWT
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/user/token")
 
 
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):

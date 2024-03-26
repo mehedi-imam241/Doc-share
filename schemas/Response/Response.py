@@ -4,5 +4,13 @@ class Response(BaseModel):
     success: bool = True
     message: str = "Request Successful"
 
-    class Config:
-        from_attributes = True
+    model_config = {
+        "json_schema_extra": {
+            "examples": [
+                {
+                    "success": True,
+                    "message": "Request Successful"
+                }
+            ]
+        }
+    }

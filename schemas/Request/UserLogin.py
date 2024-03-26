@@ -5,5 +5,14 @@ class UserLoginPayload(BaseModel):
     email: str
     password: str
 
-    class Config:
-        from_attributes = True
+    model_config = {
+        "json_schema_extra": {
+            "examples": [
+                {
+                    "email": "mehedi@gmail.com",
+                    "password": "Password123"
+
+                }
+            ]
+        }
+    }
