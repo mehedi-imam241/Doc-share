@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e017bd-cc94-4094-88e1-26482eafe5f6" name="Changes" comment="project dockerized">
+    <list default="true" id="23e017bd-cc94-4094-88e1-26482eafe5f6" name="Changes" comment="swagger configuration added">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/doc_share.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/doc_share.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/docs.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/docs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemas/Request/DocsCreate.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/Request/DocsCreate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemas/Request/DocsUpdate.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/Request/DocsUpdate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemas/Request/UserCreate.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/Request/UserCreate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemas/Request/UserLogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/Request/UserLogin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemas/Response/Docs.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/Response/Docs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemas/Response/Response.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/Response/Response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemas/Response/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/Response/User.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemas/Response/UserLoginResponse.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/Response/UserLoginResponse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemas/common/DocsBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/common/DocsBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemas/common/SharedDocBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/common/SharedDocBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemas/common/UserBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/common/UserBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/getUserByToken.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/getUserByToken.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -64,7 +52,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -119,7 +107,9 @@
       <workItem from="1711436570785" duration="314000" />
       <workItem from="1711437156063" duration="149000" />
       <workItem from="1711437310540" duration="10937000" />
-      <workItem from="1711448976630" duration="13147000" />
+      <workItem from="1711448976630" duration="13820000" />
+      <workItem from="1711466500088" duration="128000" />
+      <workItem from="1711471112182" duration="383000" />
     </task>
     <task id="LOCAL-00001" summary="project dockerized">
       <option name="closed" value="true" />
@@ -129,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711455198681</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="swagger configuration added">
+      <option name="closed" value="true" />
+      <created>1711466205260</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711466205260</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +135,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project dockerized" />
-    <option name="LAST_COMMIT_MESSAGE" value="project dockerized" />
+    <MESSAGE value="swagger configuration added" />
+    <option name="LAST_COMMIT_MESSAGE" value="swagger configuration added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/my_docs$my_docs.coverage" NAME="my_docs Coverage Results" MODIFIED="1711446636213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

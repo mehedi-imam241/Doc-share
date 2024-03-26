@@ -13,7 +13,7 @@ services:
       - .env
 
     environment:
-      - ENVIRONMENT=dev
+      - ENVIRONMENT=prod
 
 
 
