@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="23e017bd-cc94-4094-88e1-26482eafe5f6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/my_docs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Doc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/SharedDoc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/User.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/doc_share.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/docs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/Request/DocsCreate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/Request/DocsUpdate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/Request/UserCreate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/Request/UserLogin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/Response/Docs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/Response/Response.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/Response/User.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/Response/UserLoginResponse.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/common/DocsBase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/common/SharedDocBase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/common/UserBase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/JWT_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/getUserByToken.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/hash.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FastAPI main" />
+        <option value="FastAPI test_main" />
+        <option value="Dockerfile" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2e8GpNtvtujaT7FAMvbTopPacuX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;FastAPI.my_docs.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\my_docs" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="my_docs" type="Python.FastAPI">
+      <option name="file" value="$PROJECT_DIR$/main.py" />
+      <module name="my_docs" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="D:\my_docs\.venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.12 (my_docs)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-09665e90c3a7-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15026.15" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="23e017bd-cc94-4094-88e1-26482eafe5f6" name="Changes" comment="" />
+      <created>1711278973817</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711278973817</updated>
+      <workItem from="1711278999180" duration="3765000" />
+      <workItem from="1711289071719" duration="1513000" />
+      <workItem from="1711308463942" duration="1690000" />
+      <workItem from="1711346541824" duration="663000" />
+      <workItem from="1711348760263" duration="632000" />
+      <workItem from="1711350092504" duration="17288000" />
+      <workItem from="1711383356366" duration="13222000" />
+      <workItem from="1711402822147" duration="136000" />
+      <workItem from="1711402969278" duration="279000" />
+      <workItem from="1711403338172" duration="5674000" />
+      <workItem from="1711436570785" duration="314000" />
+      <workItem from="1711437156063" duration="149000" />
+      <workItem from="1711437310540" duration="10937000" />
+      <workItem from="1711448976630" duration="5117000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/my_docs$my_docs.coverage" NAME="my_docs Coverage Results" MODIFIED="1711446636213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
